@@ -15,6 +15,10 @@ body {
     font-family: "Trebuchet MS";
 }
 
+.input {
+    vertical-align: middle
+}
+
 .submit {
     background-color: #ffffff;
     color: #000000;
@@ -24,4 +28,10 @@ body {
     cursor: pointer;
     font-size: 20px;
     padding: 18px 40px;
+    margin-top: 25px;
+}
+
+#chatbot {
+    text-align: center;
+    margin-top: 250px;
 }
