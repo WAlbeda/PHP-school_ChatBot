@@ -15,10 +15,8 @@
         </form>
         <?php
         //base variables
-        /*$jFileW = fopen("jData.ini", "w");
-        $jFileA = fopen("jData.ini", "a");
-        $wFileW = fopen("wData.ini", "w");
-        $wFileA = fopen("wData.ini", "a");*/
+        $jFile = "jData.ini";
+        $wFile = "wData.ini";
         //base functions
         function getCMessage(){
             if(isset($_POST["submit"])) {
@@ -32,12 +30,13 @@
         function sendSResponse($response){
             echo $response;
         }
-        function findSResponse(){
+        function findSResponse($cQuestion){
             print_r(parse_ini_file("jData.ini"));
+            $cQuestion = "0";
         }
 
         echo getCMessage();
-        findSResponse();
+        findSResponse("4");
         ?>
     </div>
 </body>
