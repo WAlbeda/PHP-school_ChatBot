@@ -6,7 +6,7 @@
     <title>ChatBot</title>
 </head>
 <body>
-    <h1 class="title">Een ChatBot is geen ChatRobot en al helemaal geen RobotChat.</h1>
+    <h1 class="title">Een ChatBot is geen ChatRobot en al helemaal geen RobotChat of RoboChat.</h1>
     <p>snor</p>
     <form id="chatbot" method="post">
         <input name="cMessage" type="text" placeholder="Your Message">
