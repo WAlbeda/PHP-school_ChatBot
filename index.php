@@ -14,8 +14,10 @@
     </form>
     <?php
     //base variables
-    $jFile = fopen("jData.ini", "w");
-    $wFile = fopen("wData.ini", "w");
+    $jFileW = fopen("jData.ini", "w");
+    $jFileA = fopen("jData.ini", "a");
+    $wFileW = fopen("wData.ini", "w");
+    $wFileA = fopen("wData.ini", "a");
     //base functions
     function getCMessage(){
         if(isset($_POST["submit"])) {
