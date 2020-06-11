@@ -21,8 +21,9 @@ body {
     font-size: 18px;
     width: 79%;
     border: 2px solid #ffffff;
-    background-color: #000000;
-    color: white;
+    border-radius: 2px;
+    background-color: #a9a9a9;
+    color: #ffffff;
 }
 
 .submit {
@@ -47,6 +48,7 @@ body {
     margin-left: 20vh;
     margin-right: 20vh;
     border: 5px solid #ffffff;
+    border-radius: 2px;
 }
 
 .output {
