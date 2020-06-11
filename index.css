@@ -20,8 +20,9 @@ body {
     display: block;
     font-size: 18px;
     width: 79%;
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
     background-color: #000000;
+    color: white;
 }
 
 .submit {
