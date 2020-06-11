@@ -9,6 +9,10 @@ body {
     color: #ffffff;
 }
 
+.title {
+    font-size: 30px;
+}
+
 #main {
 
 }
@@ -21,8 +25,11 @@ body {
 }
 
 .submit {
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    margin-right: 1vh;
+    margin-bottom: 1vh;
     display: block;
     background-color: #ffffff;
     color: #000000;
@@ -36,7 +43,9 @@ body {
 }
 
 #chatbot {
-
+    vertical-align: bottom;
+    background-color: green;
+    height: 90vh;
 }
 
 .output {

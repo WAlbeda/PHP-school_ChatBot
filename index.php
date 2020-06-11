@@ -2,6 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>ChatBot</title>
 </head>
@@ -34,8 +35,7 @@
 
     ?>
     <div id="main">
-        <h1 class="title">Een ChatBot is geen ChatRobot en al helemaal geen RobotChat.</h1>
-        <p>snor</p>
+        <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
         <form id="chatbot" method="post">
             <p class="output"><?php echo getCMessage(); ?></p>
             <input class="input" name="cMessage" type="text" placeholder="Your Message">
