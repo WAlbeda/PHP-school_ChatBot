@@ -23,7 +23,7 @@
     }
     function findSResponse(){
     }
-    /* ewad*/
+
     echo getCMessage();
     ?>
 </html>
