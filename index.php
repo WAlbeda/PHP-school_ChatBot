@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
     <h1>ZULULULUlululululu</h1>
     <p>U SUCK JOE</p>
     <form id="chatbot" method="post">
@@ -26,4 +31,5 @@
 
     echo getCMessage();
     ?>
+</body>
 </html>
