@@ -33,7 +33,7 @@
         function sendSResponse($response){
             echo $response;
         }
-        function findSResponse(){
+        function findSResponse($cQuestion){
             print_r(parse_ini_file("jData.ini"));
         }
 
