@@ -13,7 +13,10 @@
         <input type="submit" name="submit"/>
     </form>
     <?php
-    
+    //base variables
+    $jFile = fopen("jData.ini", "w");
+    $wFile = fopen("wData.ini", "w");
+    //base functions
     function getCMessage(){
         if(isset($_POST["submit"])) {
             if (!empty($_POST["cMessage"])) {
