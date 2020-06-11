@@ -32,12 +32,12 @@
             echo $response;
         }
         function findSResponse($cQuestion){
-            print_r(parse_ini_file("jData.ini"));
+            print_r(parse_ini_file($GLOBALS["jFile"],true));
             $cQuestion = "0";
         }
 
         echo getCMessage();
-        findSResponse("4");
+        findSResponse("5");
         ?>
     </div>
 </body>
