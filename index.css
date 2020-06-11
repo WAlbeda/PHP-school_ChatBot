@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url(Trebuchet_MS.ttf);
+}
+
 title {
     font-family: "Trebuchet MS";
 }
