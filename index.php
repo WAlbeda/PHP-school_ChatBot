@@ -25,9 +25,9 @@
     function sendSResponse($response){
         echo $response;
     }
-    function findSResponse($pattern,$str){
+    function findSResponse($pattern){
        // $pattern .= "/".$pattern."/i";
-        preg_match($pattern, $str, $matches, PREG_OFFSET_CAPTURE);
+        preg_match($pattern, file_get_contents($GLOBALS["jFile"]), $matches, PREG_OFFSET_CAPTURE);
         return $matches;
     }
 
