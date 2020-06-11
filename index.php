@@ -2,11 +2,11 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ChatBot</title>
 </head>
 <body>
-    <h1>ZULULULUlululululu</h1>
-    <p>U SUCK JOE</p>
+    <h1>Een ChatBot is geen ChatRobot en al helemaal geen RobotChat.</h1>
+    <p>snor</p>
     <form id="chatbot" method="post">
         <input name="cMessage" type="text" placeholder="Your Message">
         <label for="cMessage">EWA</label><br>
