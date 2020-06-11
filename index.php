@@ -31,7 +31,7 @@
             echo $response;
         }
         function findSResponse($cQuestion){
-            print_r(parse_ini_file($GLOBALS["jFile"]));
+            print_r(parse_ini_file($GLOBALS["jFile"],true));
             $cQuestion = "0";
         }
 
