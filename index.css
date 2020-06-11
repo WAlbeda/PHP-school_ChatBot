@@ -39,7 +39,9 @@ body {
 }
 
 .chatdiv {
-    padding: 60px 60px;
+    padding: 30vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
     border: 5px solid #ffffff;
 }
 
