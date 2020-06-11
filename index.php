@@ -25,14 +25,14 @@
     function sendSResponse($response){
         echo $response;
     }
-    function findSResponse($pattern){
+    function findSResponse($pattern,$str){
        // $pattern .= "/".$pattern."/i";
-        preg_match($pattern, $GLOBALS["jData"], $matches, PREG_OFFSET_CAPTURE);
+        preg_match($pattern, $str, $matches, PREG_OFFSET_CAPTURE);
         return $matches;
     }
 
     echo getCMessage();
-    print_r(findSResponse("/two/i"));
+    print_r(findSResponse("/two/i",file_get_contents($jFile)));
 
 
     ?>
