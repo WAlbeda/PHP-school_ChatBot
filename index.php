@@ -34,9 +34,11 @@
             echo $response;
         }
         function findSResponse(){
+            print_r(parse_ini_file("jData.ini"));
         }
 
         echo getCMessage();
+        findSResponse();
         ?>
     </div>
 </body>
