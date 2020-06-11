@@ -32,7 +32,7 @@
     }
 
     echo getCMessage();
-    print_r(findSResponse("/two/i",file_get_contents($jFile)));
+    print_r(findSResponse("/tree/i",file_get_contents($jFile)));
 
 
     ?>
