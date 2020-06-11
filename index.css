@@ -16,10 +16,16 @@ body {
 }
 
 .input {
-    vertical-align: middle
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 18px;
 }
 
 .submit {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     background-color: #ffffff;
     color: #000000;
     border: none;
@@ -32,6 +38,5 @@ body {
 }
 
 #chatbot {
-    text-align: center;
     margin-top: 250px;
 }
