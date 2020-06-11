@@ -23,13 +23,14 @@
     function sendSResponse($response){
         echo $response;
     }
-    function findSResponse($cQuestion){
-        print_r(parse_ini_file($GLOBALS["jFile"],true));
-        $cQuestion = "0";
+    function findSResponse($pattern,$str){
+       // $pattern .= "/".$pattern."/i";
+        preg_match($pattern, $str, $matches, PREG_OFFSET_CAPTURE);
+        return $matches;
     }
 
     echo getCMessage();
-
+    findSResponse("hoi","Hoi mijn naam is"."hoi doei");
 
 
     ?>
