@@ -6,7 +6,7 @@
     <title>ChatBot</title>
 </head>
 <body>
-    <div class="main">
+    <div id="main">
         <h1 class="title">Een ChatBot is geen ChatRobot en al helemaal geen RobotChat.</h1>
         <p>snor</p>
         <form id="chatbot" method="post">
