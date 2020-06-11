@@ -15,11 +15,11 @@ body {
 
 .input {
     height: 30px;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     font-size: 18px;
-    width: 60vw;
+    width: 79%;
     border: 5px solid #ffffff;
     background-color: a9a9a9;
 }
@@ -42,9 +42,9 @@ body {
 }
 
 .chatdiv {
-    padding: 60vw 30vh;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    padding: 30vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
     border: 5px solid #ffffff;
 }
 
