@@ -5,14 +5,11 @@
 
 body {
     background-color: #000000;
+    font-family: "Trebuchet MS";
 }
 
 #main {
     color: #ffffff;
-}
-
-.title {
-    font-family: "Trebuchet MS";
 }
 
 .input {
@@ -39,4 +36,8 @@ body {
 
 #chatbot {
     margin-top: 250px;
+}
+
+.output {
+    text-align: center;
 }
