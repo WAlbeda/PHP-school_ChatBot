@@ -39,7 +39,7 @@
         }
 
         echo getCMessage();
-        findSResponse();
+        findSResponse("4");
         ?>
     </div>
 </body>
