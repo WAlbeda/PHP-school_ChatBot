@@ -14,3 +14,14 @@ body {
 .title {
     font-family: "Trebuchet MS";
 }
+
+.submit {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 18px 40px;
+}

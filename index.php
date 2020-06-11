@@ -12,7 +12,7 @@
         <form id="chatbot" method="post">
             <input name="cMessage" type="text" placeholder="Your Message">
             <label for="cMessage">EWA</label><br>
-            <input type="submit" name="submit"/>
+            <input class="submit" type="submit" name="submit"/>
         </form>
         <?php
         //base variables
