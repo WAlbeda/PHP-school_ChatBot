@@ -35,6 +35,7 @@
         }
         function findSResponse($cQuestion){
             print_r(parse_ini_file("jData.ini"));
+            $cQuestion = "0";
         }
 
         echo getCMessage();
