@@ -34,8 +34,10 @@
 
 
     ?>
-    <div id="main">
+    <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
+    </div>
+    <div class="chatdiv"></div>
         <form id="chatbot" method="post">
             <p class="output"><?php echo getCMessage(); ?></p>
             <input class="input" name="cMessage" type="text" placeholder="Your Message">
