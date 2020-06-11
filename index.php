@@ -31,7 +31,7 @@
     }
 
     echo getCMessage();
-    print_r(findSResponse("/hoi/i","Hoi mijn naam is"."hoi doei"));
+    print_r(findSResponse("/hoi/i","H mijn naam is"."hoi doei"));
 
 
     ?>
