@@ -10,6 +10,7 @@
     <?php
     //base variables
     $jFile = "jData.ini";
+    $jData = parse_ini_file($jFile,true);
     $wFile = "wData.ini";
     //base functions
     function getCMessage(){
@@ -24,14 +25,14 @@
     function sendSResponse($response){
         echo $response;
     }
-    function findSResponse($pattern,$str){
+    function findSResponse($pattern){
        // $pattern .= "/".$pattern."/i";
-        preg_match($pattern, $str, $matches, PREG_OFFSET_CAPTURE);
+        preg_match($pattern, $GLOBALS["jData"], $matches, PREG_OFFSET_CAPTURE);
         return $matches;
     }
 
     echo getCMessage();
-    print_r(findSResponse("/hoi/i","H mijn naam is"."hoi doei"));
+    print_r(findSResponse("/two/i"));
 
 
     ?>
