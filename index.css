@@ -10,24 +10,23 @@ body {
 }
 
 .title {
-    font-size: 30px;
+    font-size: 2vw;
+    text-align: center;
 }
 
 .input {
     height: 30px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    margin-top: 15px;
     font-size: 18px;
     width: 79%;
     border: 2px solid #ffffff;
-    border-radius: 2px;
-    background-color: #a9a9a9;
+    background-color: #000000;
     color: #ffffff;
 }
 
 .submit {
-    display: block;
     background-color: #ffffff;
     color: #000000;
     border: none;
@@ -36,20 +35,27 @@ body {
     cursor: pointer;
     font-size: 20px;
     padding: 18px 40px;
-    margin-top: 25px;
 }
 
-#chatbot {
+#chatbotForm {
 
 }
 
 .chatdiv {
-    padding: 30vh;
-    margin-left: 20vh;
-    margin-right: 20vh;
-    border: 5px solid #ffffff;
+    padding-top: 60vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border: 2px solid #ffffff;
+    background-color: #000000;
 }
 
 .output {
     text-align: center;
+}
+
+.chatbot {
+    padding-top: 1vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    background-color: #303030;
 }
