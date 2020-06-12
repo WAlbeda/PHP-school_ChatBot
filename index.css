@@ -10,17 +10,17 @@ body {
 }
 
 .title {
-    font-size: 2vw;
+    font-size: 20px;
     text-align: center;
 }
 
 .input {
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
+    height: 35px;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     font-size: 18px;
-    width: 79%;
+    width: 80%;
     border: 2px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
@@ -42,7 +42,7 @@ body {
 }
 
 .chatdiv {
-    padding-top: 60vh;
+    padding-top: 70vh;
     margin-left: 1vw;
     margin-right: 1vw;
     border: 2px solid #ffffff;
