@@ -26,12 +26,10 @@
         echo $response;
     }
     function findSResponse($input){
-       if(preg_match("/help/i",$input)){
-            return nl2br("test 1 2 3\n");
-       }
-       else if ($input === "ERROR: No message was send!"){
-           return nl2br("ERROR: No message was send!\n");
-       }
+       if(preg_match("/help/i",$input))return nl2br("test 1 2 3\n");
+       else if ($input === "ERROR: No message was send!")return nl2br("ERROR: No message was send!\n");
+       else if (preg_match("/verveel/i",$input))return nl2br("Ga een stukje wandelen of ga sporten.\n Maak je email inbox op orde. Meld je of voor reclame en spam.\n Bel of stuur een bericht naar iemand die je al een tijdje niet meer hebt gesproken.\n Maak eindelijk die kamer van je een schoon. Al dat stof is niet gezond voor je.\n Ga lekker een spanned boek lezen of begin aan een nieuwe netflix serie.");
+       else if (preg_match("/doen/i",$input)) return "Ga eten kooken voor de komende dagen. Dan heb je dat alvast gedaan.\n Maak een buckit list.\n Als je nog geen vakantie hebt voor de vakantie. Ga opzoek naar een leuke locatie en plan een vakantie daar heen,\n Ga met een paar vrienden of familie naar een museum of de bioscoop.\n Ga mensen op een forum helpen met hun problemen.\n of nodig een paar vrienden uit of te gaan chillen.";
        else {
            return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>".
                   '<form method="post">
