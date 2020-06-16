@@ -30,6 +30,9 @@
        if(preg_match("/help/i",$input)){
             return "test 1 2 3";
        }
+       else {
+           return "Ik weet niet hoe ik niet op moet antwoorden.\n Jouw vraag was \"$input\".";
+       }
     }
 
     echo getCMessage();
@@ -42,7 +45,7 @@
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
     </div>
     <div class="chatbot">
-        <div class="chatdiv"><p class="output"><?php echo getCMessage(); ?></p></div>
+        <div class="chatdiv"><p class="output"><?php echo sendSResponse(findSResponse(getCMessage())); ?></p></div>
             <form id="chatbotForm" method="post">
                 <input class="input" name="cMessage" type="text" placeholder="Your Message">
                 <input class="submit" type="submit" name="submit"/>
