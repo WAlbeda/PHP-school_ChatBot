@@ -33,7 +33,16 @@
            return nl2br("ERROR: No message was send!\n");
        }
        else {
-           return nl2br("Ik weet niet hoe ik niet op moet antwoorden.\n Jouw vraag was \"$input\".\n");
+           return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>".
+                  '<form method="post">
+                  <p>Wil je een nieuwe vraag met antwoord toevoegen?</p>
+                  <input type="radio" id="ja" name="add" value="ja">
+                  <label for="ja">ja</label><br>
+                  <input type="radio" id="nee" name="add" value="nee">
+                  <label for="nee">nee</label><br>
+                  <input type="radio" id="mischien" name="add" value="mischien">
+                  <label for="mischien">mischien later</label><br>
+                  <input class="submit" type="submit" name="confirm"/>';
        }
     }
     function echoInput(){
@@ -43,13 +52,19 @@
             echo $output;
         }
     }
-
+    function addQuestion(){
+        if (isset($_POST["confirm"])){
+            if($_POST == "ja") ;
+            else if ($_POST["confirm"] == "mischien") echo "Vraag het zelfde als je het later wil toevoegen";
+            else ;
+        }
+    }
     ?>
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
     </div>
     <div class="chatbot">
-        <div class="chatdiv"><p class="output"><?php echo echoInput();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
+        <div class="chatdiv"><p class="output"><?php echo echoInput(); addQuestion();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
             <form id="chatbotForm" method="post">
                 <input class="input" name="cMessage" type="text" placeholder="Your Message">
                 <input class="submit" type="submit" name="submit"/>
