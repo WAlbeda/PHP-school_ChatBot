@@ -8,10 +8,9 @@
 </head>
 <body>
     <?php
-    //base variables
-   /* $jFile = "jData.txt";
-    $jData = parse_ini_file($jFile,true);
-    $wFile = "wData.ini";*/
+    //TODO add more questions and answers!
+    //TODO add css for new forms
+
     //base functions
     function getCMessage(){
         if(isset($_POST["submit"])) {
