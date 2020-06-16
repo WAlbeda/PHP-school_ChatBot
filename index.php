@@ -23,29 +23,33 @@
         }
     }
     function sendSResponse($response){
-        $response .= "\n";
         echo $response;
     }
     function findSResponse($input){
        if(preg_match("/help/i",$input)){
-            return "test 1 2 3";
+            return nl2br("test 1 2 3\n");
+       }
+       else if ($input === "ERROR: No message was send!"){
+           return nl2br("ERROR: No message was send!\n");
        }
        else {
-           return "Ik weet niet hoe ik niet op moet antwoorden.\n Jouw vraag was \"$input\".";
+           return nl2br("Ik weet niet hoe ik niet op moet antwoorden.\n Jouw vraag was \"$input\".\n");
        }
     }
-
-    echo getCMessage();
-    sendSResponse(findSResponse(getCMessage()));
-
-
+    function echoInput(){
+        if (!empty($_POST["cMessage"]) && $_POST["cMessage"] !== "Ik weet niet hoe ik niet op moet antwoorden.\n Jouw vraag was \"\".") {
+            $output = $_POST["cMessage"];
+            $output .= nl2br("\n");
+            echo $output;
+        }
+    }
 
     ?>
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
     </div>
     <div class="chatbot">
-        <div class="chatdiv"><p class="output"><?php echo sendSResponse(findSResponse(getCMessage())); ?></p></div>
+        <div class="chatdiv"><p class="output"><?php echo echoInput();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
             <form id="chatbotForm" method="post">
                 <input class="input" name="cMessage" type="text" placeholder="Your Message">
                 <input class="submit" type="submit" name="submit"/>
