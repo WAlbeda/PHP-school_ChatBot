@@ -68,10 +68,13 @@
     }
     function writeQ_A(){
             if(isset($_POST["addSubmit"]) && !empty($_POST["question"]) && !empty($_POST["answer"])){
-            file_put_contents("data.txt",$_POST["question"]);
-            file_put_contents("data.txt",$_POST["answer"]);
+                $question = $_POST["question"]."\n";
+                $answer = $_POST["answer"]."\n";
+                file_put_contents("data.txt",$question,FILE_APPEND);
+                file_put_contents("data.txt",$answer,FILE_APPEND);
+                echo "Bedankt voor je hulp met het verbeter van deze chatbbot :D!";
             }
-            elseif (isset($_POST["addSubmit"])) echo "Vul beide tekst velden in.";
+            else if (isset($_POST["addSubmit"])) echo "Vul beide tekst velden in.";
     }
     ?>
     <div id="aboveChatbot">
