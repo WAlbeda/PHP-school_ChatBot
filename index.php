@@ -68,8 +68,8 @@
     }
     function writeQ_A(){
             if(isset($_POST["addSubmit"]) && !empty($_POST["question"]) && !empty($_POST["answer"])){
-                $question = $_POST["question"]."\n";
-                $answer = $_POST["answer"]."\n";
+                $question = "Q: ".$_POST["question"]."\n";
+                $answer = "A: ".$_POST["answer"]."\n";
                 file_put_contents("data.txt",$question,FILE_APPEND);
                 file_put_contents("data.txt",$answer,FILE_APPEND);
                 echo "Bedankt voor je hulp met het verbeter van deze chatbbot :D!";
