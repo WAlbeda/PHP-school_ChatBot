@@ -55,7 +55,7 @@
     function addQuestion(){
         if (isset($_POST["confirm"])){
             if($_POST == "ja") ;
-            else if ($_POST["confirm"] == "mischien") echo "Vraag het zelfde als je het later wil toevoegen";
+            else if ($_POST["add"] == "mischien") echo "Vraag de zelfde vraag als je het later wil toevoegen";
             else ;
         }
     }
