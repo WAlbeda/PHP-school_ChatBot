@@ -23,16 +23,18 @@
         }
     }
     function sendSResponse($response){
+        $response .= "\n";
         echo $response;
     }
-    function findSResponse($pattern){
-       // $pattern .= "/".$pattern."/i";
-        preg_match($pattern, file_get_contents($GLOBALS["jFile"]), $matches, PREG_OFFSET_CAPTURE);
-        return $matches;
+    function findSResponse($input){
+       if(preg_match("/help/i",$input)){
+            return "test 1 2 3";
+       }
     }
 
     echo getCMessage();
-    print_r(findSResponse("/naam/i",file_get_contents($jFile)));
+    sendSResponse(findSResponse(getCMessage()));
+
 
 
     ?>
