@@ -9,9 +9,9 @@
 <body>
     <?php
     //base variables
-    $jFile = "jData.ini";
+   /* $jFile = "jData.txt";
     $jData = parse_ini_file($jFile,true);
-    $wFile = "wData.ini";
+    $wFile = "wData.ini";*/
     //base functions
     function getCMessage(){
         if(isset($_POST["submit"])) {
@@ -53,22 +53,37 @@
         }
     }
     function addQuestion(){
-        if (isset($_POST["confirm"])){
-            if($_POST == "ja") ;
-            else if ($_POST["add"] == "mischien") echo "Vraag de zelfde vraag als je het later wil toevoegen";
-            else ;
+        if (isset($_POST["confirm"])) {
+            if ($_POST["add"] == "ja") {
+                echo '<form method="post"
+                    <p>Wat is uw vraag?</p>
+                    <input type="text" name="question" placeholder="Your Message">
+                    <p>Wat is uw antwoord op uw vraag?</p>
+                    <input type="text" name="answer" placeholder="Your Message">
+                    <input type="submit" name="addSubmit">
+                    </form>';
+            } else if ($_POST["add"] == "mischien") echo "Vraag de zelfde vraag als je het later wil toevoegen";
+            else echo "Jammer D:";
         }
+    }
+    function writeQ_A(){
+            if(isset($_POST["addSubmit"]) && !empty($_POST["question"]) && !empty($_POST["answer"])){
+            file_put_contents("data.txt",$_POST["question"]);
+            file_put_contents("data.txt",$_POST["answer"]);
+            }
+            elseif (isset($_POST["addSubmit"])) echo "Vul beide tekst velden in.";
     }
     ?>
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
     </div>
     <div class="chatbot">
-        <div class="chatdiv"><p class="output"><?php echo echoInput(); addQuestion();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
+        <div class="chatdiv"><p class="output"><?php echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
             <form id="chatbotForm" method="post">
                 <input class="input" name="cMessage" type="text" placeholder="Your Message">
                 <input class="submit" type="submit" name="submit"/>
             </form>
     </div>
+
 </body>
 </html>
