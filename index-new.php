@@ -17,6 +17,7 @@
         $year = " ".$_POST["year"]."\n";
         $all = "$firstName $surName $email $day $month $year";
         file_put_contents("data.txt",$all,FILE_APPEND);
+        header("Location: /test/index.php");
     }
 
 ?>
