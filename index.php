@@ -21,10 +21,6 @@
     }
 
 ?>
-
-
-
-
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
     </div>
@@ -48,7 +44,16 @@
                 ?>
             </select>
             <label for="day">dag</label> <br><br>
-            <input list="month" name="month">
+            <select list="month" name="month">
+                <?php
+                for ($i=1; $i<=12; $i++)
+                {
+                    ?>
+                    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                    <?php
+                }
+                ?>
+            </select>
             <label for="month">maand</label> <br><br>
             <select name="year">
                 <?php
@@ -61,20 +66,6 @@
                 ?>
             </select>
             <label for="year">jaar</label> <br><br>
-            <datalist id="month">
-                <option value="january"></option>
-                <option value="feberuary"></option>
-                <option value="maart"></option>
-                <option value="april"></option>
-                <option value="mei"></option>
-                <option value="juni"></option>
-                <option value="juli"></option>
-                <option value="augustes"></option>
-                <option value="september"></option>
-                <option value="oktober"></option>
-                <option value="november"></option>
-                <option value="december"></option>
-            </datalist>
             <input type="submit" name="submit">
         </form>
     </div>
