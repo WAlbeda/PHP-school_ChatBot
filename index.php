@@ -73,6 +73,7 @@
             }
             else if (isset($_POST["addSubmit"])) echo "Vul beide tekst velden in.";
     }
+
     ?>
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
@@ -83,6 +84,8 @@
                 <input class="input" name="cMessage" type="text" placeholder="Your Message">
                 <input class="submit" type="submit" name="submit"/>
             </form>
+
+
     </div>
 
 </body>
