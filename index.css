@@ -14,6 +14,11 @@ body {
     text-align: center;
 }
 
+.intro{
+    text-align: center;
+    font-size: 18px;
+}
+
 .input {
     height: 35px;
     margin-left: 1vw;
