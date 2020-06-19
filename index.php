@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php
+    session_start();
     if(isset($_POST["submit"])){
         $firstName = "Name: ".$_POST["firstName"]." ";
         $surName = $_POST["surName"]."\n";
@@ -18,11 +19,18 @@
         $all = "$firstName $surName $email $day $month $year";
         file_put_contents("data.txt",$all,FILE_APPEND);
         header("Location: chatbot.php");
-    }
-    session_start();
-    if(isset($_POST["submit"])) {
+
         $_SESSION["name"] = $_POST["firstName"] . " " . $_POST["surName"];
+        $birthDate = $_POST["month"] . "/" . $_POST["day"] . "/" . $_POST["year"];
+        //explode the date to get month, day and year
+        $birthDate = explode("/", $birthDate);
+        //get age from date or birthdate
+        $_SESSION["age"] = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
+            ? ((date("Y") - $birthDate[2]) - 1)
+            : (date("Y") - $birthDate[2]));
     }
+
+
 ?>
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
