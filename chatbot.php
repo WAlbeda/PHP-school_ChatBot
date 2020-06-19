@@ -35,7 +35,7 @@
        else if (preg_match("/boek/i",$input)) return "Je kan heel veel leuke boeken op deze site vinden: https://www.bruna.nl/boekentop100";
        else {
            return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>".
-                  '<form method="post">
+                  '<form method="post" class="form">
                   <p>Wil je een nieuwe vraag met antwoord toevoegen?</p>
                   <input type="radio" id="ja" name="add" value="ja">
                   <label for="ja">ja</label><br>
@@ -56,7 +56,7 @@
     function addQuestion(){
         if (isset($_POST["confirm"])) {
             if ($_POST["add"] == "ja") {
-                echo '<form method="post"
+                echo '<form method="post class="form">
                     <p>Wat is uw vraag?</p>
                     <input type="text" name="question" placeholder="Your Message">
                     <p>Wat is uw antwoord op uw vraag?</p>

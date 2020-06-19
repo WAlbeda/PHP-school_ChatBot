@@ -47,11 +47,14 @@ body {
 }
 
 .chatdiv {
-    padding-top: 70vh;
+    padding-top: 40vh;
     margin-left: 1vw;
     margin-right: 1vw;
     border: 2px solid #ffffff;
     background-color: #000000;
+    text-align: center;
+    padding-bottom: 10vh;
+    margin-bottom: auto;
 }
 
 .output {
@@ -63,4 +66,7 @@ body {
     margin-left: 4vw;
     margin-right: 4vw;
     background-color: #303030;
+}
+.form {
+    text-align: center;
 }
