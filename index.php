@@ -20,7 +20,9 @@
         header("Location: chatbot.php");
     }
     session_start();
-    $_SESSION["name"] = $_POST["firstName"]." ".$_POST["surName"];
+    if(isset($_POST["submit"])) {
+        $_SESSION["name"] = $_POST["firstName"] . " " . $_POST["surName"];
+    }
 ?>
     <div id="aboveChatbot">
         <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
