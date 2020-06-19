@@ -37,12 +37,12 @@
            return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>".
                   '<form method="post" class="form">
                   <p>Wil je een nieuwe vraag met antwoord toevoegen?</p>
-                  <input type="radio" id="ja" name="add" value="ja">
-                  <label for="ja">ja</label><br>
-                  <input type="radio" id="nee" name="add" value="nee">
-                  <label for="nee">nee</label><br>
-                  <input type="radio" id="mischien" name="add" value="mischien">
-                  <label for="mischien">mischien later</label><br>
+                  <input type="radio" id="yes" name="add" value="yes">
+                  <label for="yes">ja</label><br>
+                  <input type="radio" id="no" name="add" value="no">
+                  <label for="no">nee</label><br>
+                  <input type="radio" id="maybe" name="add" value="maybe">
+                  <label for="maybe">mischien later</label><br>
                   <input class="submit" type="submit" name="confirm"/>';
        }
     }
@@ -55,15 +55,15 @@
     }
     function addQuestion(){
         if (isset($_POST["confirm"])) {
-            if ($_POST["add"] == "ja") {
-                echo '<form method="post class="form">
+            if ($_POST["add"] == "yes") {
+                echo '<form method="post" class="form" id="addQA">
                     <p>Wat is uw vraag?</p>
                     <input type="text" name="question" placeholder="Your Message">
                     <p>Wat is uw antwoord op uw vraag?</p>
                     <input type="text" name="answer" placeholder="Your Message">
                     <input type="submit" name="addSubmit">
                     </form>';
-            } else if ($_POST["add"] == "mischien") echo "Vraag de zelfde vraag als je het later wil toevoegen";
+            } else if ($_POST["add"] == "maybe") echo "Vraag de zelfde vraag als je het later wil toevoegen";
             else echo "Jammer D:";
         }
     }
