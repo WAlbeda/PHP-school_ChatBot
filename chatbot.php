@@ -91,7 +91,7 @@
         <div class="chatdiv"><p class="output"><?php echo nl2br("Hallo ".$_SESSION["name"]."(".$_SESSION["age"].")\n"); echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
             <form id="chatbotForm" method="post">
                 <input class="input" name="cMessage" type="text" placeholder="Typ hier je bericht.">
-                <input class="submit" type="submit" name="Verzend het bericht"/>
+                <input class="submit" type="submit" name="submit" value="Verzend je bericht"/>
             </form>
     </div>
     <div class="footer">
