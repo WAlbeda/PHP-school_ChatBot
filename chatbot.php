@@ -98,6 +98,7 @@
     </div>
     <div class="footer">
         <p>Version: Willem Albeda 2020.</p>
+        <a href="https://github.com/WAlbeda/PHP-school_ChatBot"><img class="githubLink" src="Github.png" alt="GitHub"></a>
     </div>
 </body>
 </html>

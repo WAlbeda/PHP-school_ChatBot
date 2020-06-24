@@ -116,3 +116,8 @@ body {
     width: 100%;
     text-align: center;
 }
+
+.githubLink {
+    width: 20px;
+    height: 20px;
+}

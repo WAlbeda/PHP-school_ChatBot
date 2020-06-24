@@ -47,8 +47,8 @@
                 <input class="inputIndexVragen" type="text" name="firstName" placeholder="voornaam">
                 <p class="indexVragen">Wat  is je achternaam?</p>
                 <input class="inputIndexVragen" type="text" name="surName" placeholder="achternaam">
-                <p class="indexVragen">Wat is je email adress?</p>
-                <input class="inputIndexVragen" type="text" name="email" placeholder="email">
+                <p class="indexVragen">Wat is je e-mail adres?</p>
+                <input class="inputIndexVragen" type="text" name="email" placeholder="e-mail">
                 <p class="indexVragen">Wat is je geboorte datum?</p>
                 <select name="day">
                     <?php
@@ -89,6 +89,7 @@
     </div>
     <div class="footer">
         <p>Version: Willem Albeda 2020.</p>
+        <a href="https://github.com/WAlbeda/PHP-school_ChatBot"><img class="githubLink" src="Github.png" alt="GitHub"></a>
     </div>
 </body>
 </html>
