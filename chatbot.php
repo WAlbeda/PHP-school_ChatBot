@@ -26,7 +26,7 @@
     }
     function findSResponse($input){
        if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te typen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"<br>Voor nog meer opties typ je \"Geef alle mogelijkheden.\"");
-       else if ($input === "ERROR: No message was send!")return nl2br("ERROR: No message was send!\n");
+       else if ($input === "ERROR: No message was send!")return nl2br("ERROR: Je hebt geen bericht ingevuld!\n");
        else if (preg_match("/Meindert Jorna/",$input))return nl2br("Meindert Jorna is informatica docent op het Pantarijn, ontdekker van de sjiggle diggle en keizer van het rijk der Codepanta.");
        else if (preg_match("/meindert jorna/",$input)) return nl2br("Namen schrijf je met een hoofdletter Sjiggle Diggle... Probeer maar \"Wie is Meindert Jorna.\"");
        else if (preg_match("/Meindert JC/i",$input)) return "Meindert J(C)or(o)na is hoe Meindert Jorna zich noemde aan het begin van de corona lockdown.";
