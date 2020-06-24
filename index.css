@@ -10,6 +10,41 @@ body {
     color: #ffffff;
 }
 
+/*for index*/
+
+.indexVragenDiv {
+    text-align: center;
+}
+
+.indexVragen {
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+.inputIndexVragen {
+    font-size: 18px;
+    text-align: center;
+    height: 24px;
+    width: 210px;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.submitCatbot {
+    margin-top: 30px;
+    font-size: 22px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/*end index*/
+
 .title {
     font-size: 20px;
     text-align: center;

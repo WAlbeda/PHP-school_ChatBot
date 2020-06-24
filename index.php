@@ -35,52 +35,58 @@
 
 ?>
     <div id="aboveChatbot">
-        <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
+        <h1 class="title">Dit is geen ROBOCHAT.</h1>
+        <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.</p>
     </div>
     <div class="chatbot">
-        <form action="" method="post">
-            <p>Wat  is je voornaam?</p>
-            <input type="text" name="firstName"> <br><br>
-            <p>Wat  is je achternaam?</p>
-            <input type="text" name="surName"> <br><br>
-            <p>Wat is je email adress?</p>
-            <input type="text" name="email"> <br><br>
-            <p>Wat is uw geboorte datum?</p>
-            <select name="day">
-                <?php
-                for ($i=1; $i<=31; $i++)
-                {
-                    ?>
-                    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+        <div class="indexVragenDiv">
+            <form action="" method="post">
+                <p class="indexVragen">Wat  is je voornaam?</p>
+                <input class="inputIndexVragen" type="text" name="firstName" placeholder="voornaam">
+                <p class="indexVragen">Wat  is je achternaam?</p>
+                <input class="inputIndexVragen" type="text" name="surName" placeholder="achternaam">
+                <p class="indexVragen">Wat is je email adress?</p>
+                <input class="inputIndexVragen" type="text" name="email" placeholder="email">
+                <p class="indexVragen">Wat is je geboorte datum?</p>
+                <select name="day">
                     <?php
-                }
-                ?>
-            </select>
-            <label for="day">dag</label> <br><br>
-            <select list="month" name="month">
-                <?php
-                for ($i=1; $i<=12; $i++)
-                {
+                    for ($i=1; $i<=31; $i++)
+                    {
+                        ?>
+                        <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                        <?php
+                    }
                     ?>
-                    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                </select>
+                <label for="day">dag</label> <br><br>
+                <select list="month" name="month">
                     <?php
-                }
-                ?>
-            </select>
-            <label for="month">maand</label> <br><br>
-            <select name="year">
-                <?php
-                for ($i=1900; $i<=2020; $i++)
-                {
+                    for ($i=1; $i<=12; $i++)
+                    {
+                        ?>
+                        <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                        <?php
+                    }
                     ?>
-                    <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                </select>
+                <label for="month">maand</label> <br><br>
+                <select name="year">
                     <?php
-                }
-                ?>
-            </select>
-            <label for="year">jaar</label> <br><br>
-            <input type="submit" name="submit">
-        </form>
+                    for ($i=1900; $i<=2020; $i++)
+                    {
+                        ?>
+                        <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                        <?php
+                    }
+                    ?>
+                </select>
+                <label for="year">jaar</label> <br><br>
+                <input class="submitCatbot" type="submit" name="submit" value="Naar de chatbot">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Version: Willem Albeda 2020.</p>
     </div>
 </body>
 </html>
