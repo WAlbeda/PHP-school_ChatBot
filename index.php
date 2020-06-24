@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Open code made by: Willem Albeda and Jasper Marsman.-->
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
 </head>
 <body>
 <?php
+    //Open code made by: Willem Albeda and Jasper Marsman.
     session_start();
     if(isset($_POST["submit"])){
         $firstName = "Name: ".$_POST["firstName"]." ";

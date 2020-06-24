@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Open code made by: Willem Albeda and Jasper Marsman.-->
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +9,9 @@
 </head>
 <body>
     <?php
-    //TODO add more questions and answers!
+    //Open code made by: Willem Albeda and Jasper Marsman.
     //TODO add css for new forms
     session_start();
-    $urlKook = "https://www.leukerecepten.nl/";
     //base functions
     function getCMessage(){
         if(isset($_POST["submit"])) {
@@ -26,15 +26,15 @@
         echo $response;
     }
     function findSResponse($input){
-       if(preg_match("/help/i",$input))return nl2br("als je je verveelt kunnen wij je helpen. Type: 'ik verveel me' voor ideeën om te doen\n");
+       if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te typen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"");
        else if ($input === "ERROR: No message was send!")return nl2br("ERROR: No message was send!\n");
-       else if (preg_match("/verveel/i",$input))return nl2br("Ga een stukje wandelen of ga sporten.\n Maak je email inbox op orde. Meld je of voor reclame en spam.\n Bel of stuur een bericht naar iemand die je al een tijdje niet meer hebt gesproken.\n Maak eindelijk die kamer van je een schoon. Al dat stof is niet gezond voor je.\n Ga lekker een spanned boek lezen of begin aan een nieuwe netflix serie.");
-       else if (preg_match("/doen/i",$input)) return nl2br("Ga eten koken voor de komende dagen. Dan heb je dat alvast gedaan.\n Maak een buckit list.\n Als je nog geen vakantie hebt voor de vakantie. Ga opzoek naar een leuke locatie en plan een vakantie daar heen,\n Ga met een paar vrienden of familie naar een museum of de bioscoop.\n Ga mensen op een forum helpen met hun problemen.\n of nodig een paar vrienden uit of te gaan chillen.");
-       else if (preg_match("/kook/i",$input)) return nl2br("Dit is een goed site meet veel ideeën om wat lekkers te koken: ".$GLOBALS["urlKook"]);
+       else if (preg_match("/Meindert Jorna/i",$input))return nl2br("Meindert Jorna is informatica docent op het Pantarijn, ontdekker van de sjiggle diggle en keizer van het rijk der Codepanta.");
+       else if (preg_match("/meindert jorna/i",$input)) return nl2br("Namen schrijf je met een hoofdletter Sjiggle Diggle... Probeer maar \"Wie is Meindert Jorna.\"");
+       else if (preg_match("/school pc/i",$input)) return nl2br("School pc's zijn kut, niks meer niks minder.";
        else if (preg_match("/vakantie/i",$input)) return "Je kan hier goede vakantie ideeën opdoen: https://www.skyscanner.nl/nieuws/inspiratie/10-ideeen-voor-een-super-zonnige-vakantie";
        else if (preg_match("/boek/i",$input)) return "Je kan heel veel leuke boeken op deze site vinden: https://www.bruna.nl/boekentop100";
        else {
-           return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>".
+           return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>Probeer anders \"help\" om alle mogelijkheden te zien.<br>".
                   '<form method="post" class="form">
                   <p>Wil je een nieuwe vraag met antwoord toevoegen?</p>
                   <input type="radio" id="yes" name="add" value="yes">
@@ -86,7 +86,7 @@
     <div class="chatbot">
         <div class="chatdiv"><p class="output"><?php echo nl2br("Hallo ".$_SESSION["name"]."(".$_SESSION["age"].")\n"); echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
             <form id="chatbotForm" method="post">
-                <input class="input" name="cMessage" type="text" placeholder="Your Message">
+                <input class="input" name="cMessage" type="text" placeholder="Typ hier je bericht.">
                 <input class="submit" type="submit" name="submit"/>
             </form>
     </div>
