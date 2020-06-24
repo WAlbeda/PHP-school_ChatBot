@@ -25,13 +25,18 @@
         echo $response;
     }
     function findSResponse($input){
-       if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te typen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"");
+       if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te typen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"<br>Voor nog meer opties typ je \"Geef alle mogelijkheden.\"");
        else if ($input === "ERROR: No message was send!")return nl2br("ERROR: No message was send!\n");
        else if (preg_match("/Meindert Jorna/",$input))return nl2br("Meindert Jorna is informatica docent op het Pantarijn, ontdekker van de sjiggle diggle en keizer van het rijk der Codepanta.");
        else if (preg_match("/meindert jorna/",$input)) return nl2br("Namen schrijf je met een hoofdletter Sjiggle Diggle... Probeer maar \"Wie is Meindert Jorna.\"");
+       else if (preg_match("/Meindert JC/i",$input)) return "Meindert J(C)or(o)na is hoe Meindert Jorna zich noemde aan het begin van de corona lockdown.";
        else if (preg_match("/school pc/i",$input)) return nl2br("School pc's zijn kut, niks meer niks minder.");
        else if (preg_match("/codepanta/i",$input)) return "Codepanta is de website waarop leerlingen van Meindert Jorna hun lesstof krijgen, de website is inmiddels onder sommige leerlingen een meme geworden.";
        else if (preg_match("/codepnata/i",$input)) return "Codepnata is de door Willem Albeda bedachte concurrent van Codepanta, ooit zal Codepnata de wereld veroveren.";
+       else if (preg_match("/corona/i",$input)) return "Het Corona virus is een redelijk gevaarlijk virus voor risico groepen. Wat je moet doen tegen corona kan je vinden op <a href=\"https://www.rijksoverheid.nl/onderwerpen/coronavirus-covid-19/nederlandse-maatregelen-tegen-het-coronavirus\">de website van de rijksoverheid</a>.";
+       else if (preg_match("/covid/i",$input)) return "Covid-19 is de nieuwe, fancy en interresante naam voor het corona virus, mensen die interresant of intelligent willen klinken gebruiken deze naam.<br>\"Covid-19\" betekend precies hetzelfde als \"het Corona virus\"";
+       else if (preg_match("/5g/i",$input)) return "5G is de nieuwste en snelste techniek (op het moment van schrijven) om data vanaf je smartphone met het mobile netwerk te verzenden.<br>5G is niet gevaarlijk, er is hier genoeg onderzoek voor gedaan en als je die nog steeds niet geloofd moet je zelf maar opnieuw je natuurkunde lessen volgen.<br>5G heeft ook niks te maken met het Corona virus.";
+       else if (preg_match("/mogelijkheden/i",$input)) return "Alle mogelijkheden zijn: \"Meindert Jorna\", \"meindert jorna\", \"Meindert JC\", \"school pc\", \"codepanta\", \"codepnata\", \"corona\", \"covid\", \"5g\", \"mogelijkheden\", \"help\".";
        else {
            return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>Probeer anders \"help\" om alle mogelijkheden te zien.<br>".
                   '<form method="post" class="form">
