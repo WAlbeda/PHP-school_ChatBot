@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Open code made by: Willem Albeda and Jasper Marsman.-->
+<!--Open code made by: Willem Albeda and Jappie313.-->
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-    //Open code made by: Willem Albeda and Jasper Marsman.
+    //Open code made by: Willem Albeda and Jappie313.
     //TODO add css for new forms
     session_start();
     //base functions
