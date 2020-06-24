@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>ChatBot</title>
+    <script>alert("Let op!\nDeze website slaat de gegevens die u invuld op.\nGebruik de website op eigen risico.\n\nEN:\nWarning!\nThis website saves the information you submit.\nUse the website at your own risk.")</script>
 </head>
 <body>
 <?php
