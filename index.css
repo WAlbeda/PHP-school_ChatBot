@@ -32,12 +32,26 @@ body {
 }
 
 .birthdateLabel {
-    margin-right: 10px;
-    font-size: 18px;
+    font-size: 20px;
+    text-align: right;
 }
 
 .birthdateDiv {
     margin-bottom: 12px;
+}
+
+.birthdateLabelAlign {
+    width: 80px;
+    display: inline-block;
+}
+
+.birthdateSelect {
+    font-size: 18px;
+    width: 70px;
+    text-align: center;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .submitCatbot {

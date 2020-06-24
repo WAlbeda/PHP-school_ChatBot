@@ -49,45 +49,45 @@
                 <input class="inputIndexVragen" type="text" name="email" placeholder="e-mail">
                 <p class="indexVragen">Wat is je geboortedatum?</p>
                 <div class="birthdateDiv">
-                <label class="birthdateLabel">dag:</label>
-                <select name="day">
-                    <?php
-                    for ($i=1; $i<=31; $i++)
-                    {
-                        ?>
-                        <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                    <div class="birthdateLabelAlign"><label class="birthdateLabel">dag:</label></div>
+                    <select class="birthdateSelect" name="day">
                         <?php
-                    }
-                    ?>
-                </select>
+                        for ($i=1; $i<=31; $i++)
+                        {
+                            ?>
+                            <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="birthdateDiv">
-                <label class="birthdateLabel">maand:</label>
-                <select name="month">
-                    <?php
-                    for ($i=1; $i<=12; $i++)
-                    {
-                        ?>
-                        <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                    <div class="birthdateLabelAlign"><label class="birthdateLabel">maand:</label></div>
+                    <select class="birthdateSelect" name="month">
                         <?php
-                    }
-                    ?>
-                </select>
+                        for ($i=1; $i<=12; $i++)
+                        {
+                            ?>
+                            <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="birthdateDiv">
-                <label class="birthdateLabel">jaar:</label>
-                <select name="year">
-                    <?php
-                    for ($i=1900; $i<=2020; $i++)
-                    {
-                        ?>
-                        <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                    <div class="birthdateLabelAlign"><label class="birthdateLabel">jaar:</label></div>
+                    <select class="birthdateSelect" name="year">
                         <?php
-                    }
-                    ?>
-                </select>
+                        for ($i=1900; $i<=2020; $i++)
+                        {
+                            ?>
+                            <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
-                <input class="submitCatbot" type="submit" name="submit" value="Naar de chatbot">
+                <input class="submitCatbot" type="submit" name="submit" value="Naar de chatbot!">
             </form>
         </div>
     </div>
