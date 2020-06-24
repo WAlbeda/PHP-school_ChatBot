@@ -26,9 +26,7 @@
 
         $_SESSION["name"] = $_POST["firstName"] . " " . $_POST["surName"];
         $birthDate = $_POST["month"] . "/" . $_POST["day"] . "/" . $_POST["year"];
-        //explode the date to get month, day and year
         $birthDate = explode("/", $birthDate);
-        //get age from date or birthdate
         $_SESSION["age"] = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
             ? ((date("Y") - $birthDate[2]) - 1)
             : (date("Y") - $birthDate[2]));
@@ -89,7 +87,7 @@
     </div>
     <div class="footer">
         <p>Version: Willem Albeda 2020.</p>
-        <a href="https://github.com/WAlbeda/PHP-school_ChatBot"><img class="githubLink" src="Github.png" alt="GitHub"></a>
+        <a href="https://github.com/WAlbeda/PHP-school_ChatBot"><img class="githubLink" src="Github.png" alt="GitHub" title="GitHub WAlbeda/PHP-school_ChatBot"></a>
     </div>
 </body>
 </html>
