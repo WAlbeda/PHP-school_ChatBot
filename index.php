@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="treefav.png">
     <title>ChatBot</title>
     <script>alert("Let op!\nDe gegevens die u invuld op deze website worden opgeslagen op onze server.\nGebruik de website op eigen risico.\n\nEN:\nWarning!\nThe information you submit on this website is saved on our server.\nUse the website at your own risk.")</script>
 </head>
