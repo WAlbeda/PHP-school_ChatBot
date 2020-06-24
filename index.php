@@ -47,7 +47,9 @@
                 <input class="inputIndexVragen" type="text" name="surName" placeholder="achternaam">
                 <p class="indexVragen">Wat is je e-mail adres?</p>
                 <input class="inputIndexVragen" type="text" name="email" placeholder="e-mail">
-                <p class="indexVragen">Wat is je geboorte datum?</p>
+                <p class="indexVragen">Wat is je geboortedatum?</p>
+                <div class="birthdateDiv">
+                <label class="birthdateLabel">dag:</label>
                 <select name="day">
                     <?php
                     for ($i=1; $i<=31; $i++)
@@ -58,7 +60,9 @@
                     }
                     ?>
                 </select>
-                <label>dag</label> <br><br>
+                </div>
+                <div class="birthdateDiv">
+                <label class="birthdateLabel">maand:</label>
                 <select name="month">
                     <?php
                     for ($i=1; $i<=12; $i++)
@@ -69,7 +73,9 @@
                     }
                     ?>
                 </select>
-                <label>maand</label> <br><br>
+                </div>
+                <div class="birthdateDiv">
+                <label class="birthdateLabel">jaar:</label>
                 <select name="year">
                     <?php
                     for ($i=1900; $i<=2020; $i++)
@@ -80,7 +86,7 @@
                     }
                     ?>
                 </select>
-                <label>jaar</label> <br><br>
+                </div>
                 <input class="submitCatbot" type="submit" name="submit" value="Naar de chatbot">
             </form>
         </div>

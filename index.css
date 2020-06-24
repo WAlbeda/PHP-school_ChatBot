@@ -18,7 +18,6 @@ body {
 
 .indexVragen {
     font-size: 22px;
-    margin-top: 50px;
 }
 
 .inputIndexVragen {
@@ -29,10 +28,20 @@ body {
     border: 2px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.birthdateLabel {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.birthdateDiv {
+    margin-bottom: 12px;
 }
 
 .submitCatbot {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 22px;
     background-color: #000000;
     color: #ffffff;
@@ -103,12 +112,33 @@ body {
     margin-right: 4vw;
     background-color: #303030;
 }
+
 .form {
     text-align: center;
     font-size: 17px;
 }
+
 #addQA {
     font-size: 17px;
+}
+
+.vraagAntwoordToevoegen {
+    text-align: center;
+    height: 20px;
+    width: 180px;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.vraagAntwoordSubmit {
+    padding: 6px 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .footer {
