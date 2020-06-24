@@ -10,7 +10,6 @@
 <body>
     <?php
     //Open code made by: Willem Albeda and Jappie313.
-    //TODO add css for new forms
     session_start();
     //base functions
     function getCMessage(){
@@ -28,11 +27,11 @@
     function findSResponse($input){
        if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te typen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"");
        else if ($input === "ERROR: No message was send!")return nl2br("ERROR: No message was send!\n");
-       else if (preg_match("/Meindert Jorna/i",$input))return nl2br("Meindert Jorna is informatica docent op het Pantarijn, ontdekker van de sjiggle diggle en keizer van het rijk der Codepanta.");
-       else if (preg_match("/meindert jorna/i",$input)) return nl2br("Namen schrijf je met een hoofdletter Sjiggle Diggle... Probeer maar \"Wie is Meindert Jorna.\"");
-       else if (preg_match("/school pc/i",$input)) return nl2br("School pc's zijn kut, niks meer niks minder.";
-       else if (preg_match("/vakantie/i",$input)) return "Je kan hier goede vakantie ideeën opdoen: https://www.skyscanner.nl/nieuws/inspiratie/10-ideeen-voor-een-super-zonnige-vakantie";
-       else if (preg_match("/boek/i",$input)) return "Je kan heel veel leuke boeken op deze site vinden: https://www.bruna.nl/boekentop100";
+       else if (preg_match("/Meindert Jorna/",$input))return nl2br("Meindert Jorna is informatica docent op het Pantarijn, ontdekker van de sjiggle diggle en keizer van het rijk der Codepanta.");
+       else if (preg_match("/meindert jorna/",$input)) return nl2br("Namen schrijf je met een hoofdletter Sjiggle Diggle... Probeer maar \"Wie is Meindert Jorna.\"");
+       else if (preg_match("/school pc/i",$input)) return nl2br("School pc's zijn kut, niks meer niks minder.");
+       else if (preg_match("/codepanta/i",$input)) return "Codepanta is de website waarop leerlingen van Meindert Jorna hun lesstof krijgen, de website is inmiddels onder sommige leerlingen een meme geworden.";
+       else if (preg_match("/codepnata/i",$input)) return "Codepnata is de door Willem Albeda bedachte concurrent van Codepanta, ooit zal Codepnata de wereld veroveren.";
        else {
            return "Ik weet niet hoe ik niet op moet antwoorden.<br> Jouw vraag was \"$input\".<br>Probeer anders \"help\" om alle mogelijkheden te zien.<br>".
                   '<form method="post" class="form">
@@ -81,7 +80,7 @@
     ?>
     <div id="aboveChatbot">
         <h1 class="title">Dit is geen ROBOCHAT.</h1>
-        <p class="intro">Deze chatbot is geïnspireerd op codepanta.<br>Typ "help" voor alle mogelijkheden.</p>
+        <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.<br>Typ "help" voor alle mogelijkheden.</p>
     </div>
     <div class="chatbot">
         <div class="chatdiv"><p class="output"><?php echo nl2br("Hallo ".$_SESSION["name"]."(".$_SESSION["age"].")\n"); echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
@@ -90,6 +89,8 @@
                 <input class="submit" type="submit" name="submit"/>
             </form>
     </div>
-
+    <div class="footer">
+        <p>Version: Willem Albeda 2020.</p>
+    </div>
 </body>
 </html>
