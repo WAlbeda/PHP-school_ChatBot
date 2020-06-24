@@ -42,7 +42,7 @@
     </div>
     <div class="chatbot">
         <div class="indexVragenDiv">
-            <form action="" method="post">
+            <form method="post">
                 <p class="indexVragen">Wat  is je voornaam?</p>
                 <input class="inputIndexVragen" type="text" name="firstName" placeholder="voornaam">
                 <p class="indexVragen">Wat  is je achternaam?</p>
@@ -60,8 +60,8 @@
                     }
                     ?>
                 </select>
-                <label for="day">dag</label> <br><br>
-                <select list="month" name="month">
+                <label>dag</label> <br><br>
+                <select name="month">
                     <?php
                     for ($i=1; $i<=12; $i++)
                     {
@@ -71,7 +71,7 @@
                     }
                     ?>
                 </select>
-                <label for="month">maand</label> <br><br>
+                <label>maand</label> <br><br>
                 <select name="year">
                     <?php
                     for ($i=1900; $i<=2020; $i++)
@@ -82,7 +82,7 @@
                     }
                     ?>
                 </select>
-                <label for="year">jaar</label> <br><br>
+                <label>jaar</label> <br><br>
                 <input class="submitCatbot" type="submit" name="submit" value="Naar de chatbot">
             </form>
         </div>
