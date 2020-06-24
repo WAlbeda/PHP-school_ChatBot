@@ -47,7 +47,7 @@
                   <label for="no">nee</label><br>
                   <input type="radio" id="maybe" name="add" value="maybe">
                   <label for="maybe">mischien later</label><br>
-                  <input class="submit" type="submit" name="confirm"/>';
+                  <input class="submit" type="submit" name="confirm" value="Verzend"/>';
        }
     }
     function echoInput(){
@@ -67,7 +67,7 @@
                     <input type="text" name="answer" placeholder="Your Message">
                     <input type="submit" name="addSubmit">
                     </form>';
-            } else if ($_POST["add"] == "maybe") echo "Vraag de zelfde vraag als je het later wil toevoegen";
+            } else if ($_POST["add"] == "maybe") echo "Vraag dezelfde vraag als je het later wil toevoegen";
             else echo "Jammer D:";
         }
     }
