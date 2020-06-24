@@ -80,8 +80,8 @@
 
     ?>
     <div id="aboveChatbot">
-        <h1 class="title">Welkom bij de "een ChatBot is geen ChatRobot en al helemaal geen RobotChat" chatbot.</h1>
-        <p class="intro">Deze chatbot kan je helpen om op leuke ideeën te komen als je je verveelt! <br>Zo kan je "Ik verveel me." of "Wat moet ik doen?" typen om ideeën te krijgen</p>
+        <h1 class="title">Dit is geen ROBOCHAT.</h1>
+        <p class="intro">Deze chatbot is geïnspireerd op codepanta.<br>Typ "help" voor alle mogelijkheden.</p>
     </div>
     <div class="chatbot">
         <div class="chatdiv"><p class="output"><?php echo nl2br("Hallo ".$_SESSION["name"]."(".$_SESSION["age"].")\n"); echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
