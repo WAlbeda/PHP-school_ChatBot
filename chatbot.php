@@ -90,7 +90,10 @@
         <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.<br>Hij beantwoord vragen over codepanta en school gerelateerde dingen.<br>Typ "help" voor alle mogelijkheden.</p>
     </div>
     <div class="chatbot">
-        <div class="chatdiv"><p class="output"><?php echo nl2br("Hallo ".$_SESSION["name"]."(".$_SESSION["age"].")\n"); echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
+        <div class="chatdiv">
+            <p class="name"><?php echo nl2br("Welkom ".$_SESSION["name"]." (".$_SESSION["age"]." jaar)\n");?></p>
+            <p class="output"><?php echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p>
+        </div>
             <form id="chatbotForm" method="post">
                 <input class="input" name="cMessage" type="text" placeholder="Typ hier je vraag.">
                 <input class="submit" type="submit" name="submit" value="Verzend je vraag"/>
