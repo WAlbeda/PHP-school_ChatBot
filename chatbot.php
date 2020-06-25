@@ -83,7 +83,6 @@
             }
             else if (isset($_POST["addSubmit"])) echo "ERROR, je moet een vraag en antwoord invullen.";
     }
-
     ?>
     <div id="aboveChatbot">
         <a class="indexLink" href="index.php"><h1 class="title">Dit is geen ROBOCHAT.</h1></a>
