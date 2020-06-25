@@ -40,10 +40,10 @@
        else if (preg_match("/banaan/i",$input)) return '<img src="banaan.png" alt="banaan">';
        else if (preg_match("/mogelijkheden/i",$input)) return nl2br("Alle mogelijkheden zijn: \"Meindert Jorna\", \"meindert jorna\", \"Meindert JC\", \"school pc\", \"codepanta\", \"codepnata\", \"corona\", \"covid\", \"5g\", \"banaan\", \"mogelijkheden\", \"help\".");
        else {
-           return "Ik weet niet hoe ik hier op moet antwoorden.<br> Jouw vraag was \"$input\".<br>Vraag anders straks \"mogelijkheden\" om alle mogelijkheden te zien.<br>".
+           return "Ik weet niet hoe ik hier op moet antwoorden.<br> Jouw vraag was \"$input\".<br>Vraag anders straks \"mogelijkheden\" om alle mogelijke vragen te zien.<br>".
                   '<form method="post" class="form">
-                  <p>Wil je een wil je bij de maker een verzoek indienen om een nieuwe vraag met antwoord toe te voegen?</p>
-                  <input type="radio" id="yes" name="add" value="yes">
+                  <p>Wil je bij de maker een verzoek indienen om een nieuwe vraag met antwoord toe te voegen?</p>
+                  <input type="radio" id="yes" name="add" value="yes" required>
                   <label for="yes">ja</label><br>
                   <input type="radio" id="no" name="add" value="no">
                   <label for="no">nee</label><br>
@@ -64,13 +64,13 @@
             if ($_POST["add"] == "yes") {
                 echo '<form method="post" class="form" id="addQA">
                     <p>Wat is de vraag die je wil toevoegen?</p>
-                    <input class="vraagAntwoordToevoegen" type="text" name="question" placeholder="Vraag">
+                    <input class="vraagAntwoordToevoegen" type="text" name="question" placeholder="Vraag" required>
                     <p>Wat is het antwoord op die vraag?</p>
-                    <input class="vraagAntwoordToevoegen" type="text" name="answer" placeholder="Antwoord">
+                    <input class="vraagAntwoordToevoegen" type="text" name="answer" placeholder="Antwoord" required>
                     <input class="vraagAntwoordSubmit" type="submit" name="addSubmit" value="Verzend">
                     </form>';
-            } else if ($_POST["add"] == "maybe") echo "Vraag dezelfde vraag als je later nog een vraag wil toevoegen.";
-            else echo "Oke dan kan je nu weer een andere vraag invullen";
+            } else if ($_POST["add"] == "maybe") echo "Vraag dezelfde vraag die je net vroeg als je later nog een vraag wil toevoegen.<br>Je kan nu weer een nieuwe vraag stellen.";
+            else echo "Oke dan kan je nu weer een andere vraag invullen.";
         }
     }
     function writeQ_A(){
@@ -79,21 +79,21 @@
                 $answer = "A: ".$_POST["answer"]."\n";
                 file_put_contents("data.txt",$question,FILE_APPEND);
                 file_put_contents("data.txt",$answer,FILE_APPEND);
-                echo "Bedankt voor je hulp met het verbeteren van deze chatbot.";
+                echo "Bedankt voor je hulp met het verbeteren van deze chatbot.<br>Je kan nu weer een nieuwe vraag stellen.";
             }
-            else if (isset($_POST["addSubmit"])) echo "Vul alsjeblieft alle tekstvelden in.";
+            else if (isset($_POST["addSubmit"])) echo "ERROR, je moet een vraag en antwoord invullen.";
     }
 
     ?>
     <div id="aboveChatbot">
-        <h1 class="title">Dit is geen ROBOCHAT.</h1>
-        <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.<br>Typ "help" voor alle mogelijkheden.</p>
+        <a class="indexLink" href="index.php"><h1 class="title">Dit is geen ROBOCHAT.</h1></a>
+        <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.<br>Hij beantwoord vragen over codepanta en school gerelateerde dingen.<br>Typ "help" voor alle mogelijkheden.</p>
     </div>
     <div class="chatbot">
         <div class="chatdiv"><p class="output"><?php echo nl2br("Hallo ".$_SESSION["name"]."(".$_SESSION["age"].")\n"); echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p></div>
             <form id="chatbotForm" method="post">
-                <input class="input" name="cMessage" type="text" placeholder="Typ hier je bericht.">
-                <input class="submit" type="submit" name="submit" value="Verzend je bericht"/>
+                <input class="input" name="cMessage" type="text" placeholder="Typ hier je vraag.">
+                <input class="submit" type="submit" name="submit" value="Verzend je vraag"/>
             </form>
     </div>
     <div class="footer">

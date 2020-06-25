@@ -42,9 +42,9 @@
         <div class="indexVragenDiv">
             <form method="post">
                 <p class="indexVragen">Wat  is je voornaam?</p>
-                <input class="inputIndexVragen" type="text" name="firstName" placeholder="voornaam">
+                <input class="inputIndexVragen" type="text" name="firstName" placeholder="voornaam" required>
                 <p class="indexVragen">Wat  is je achternaam?</p>
-                <input class="inputIndexVragen" type="text" name="surName" placeholder="achternaam">
+                <input class="inputIndexVragen" type="text" name="surName" placeholder="achternaam" required>
                 <p class="indexVragen">Wat is je e-mail adres?</p>
                 <input class="inputIndexVragen" type="text" name="email" placeholder="e-mail">
                 <p class="indexVragen">Wat is je geboortedatum?</p>

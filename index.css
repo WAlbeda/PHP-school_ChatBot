@@ -68,6 +68,11 @@ body {
 
 /*end index*/
 
+.indexLink {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .title {
     font-size: 20px;
     text-align: center;
