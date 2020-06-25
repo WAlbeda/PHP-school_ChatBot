@@ -26,7 +26,7 @@
         echo $response;
     }
     function findSResponse($input){
-       if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te typen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"<br>Voor nog meer opties typ je \"Geef alle mogelijkheden.\"");
+       if(preg_match("/help/i",$input))return nl2br("Probeer eens iets in te vragen als: \"Wie is Meindert Jorna, Wat is codepanta of hoe zijn school pc's.\"<br>Voor nog meer opties typ je \"Geef alle mogelijkheden.\"");
        else if ($input === "ERROR: No message was send!")return nl2br("ERROR: Je hebt geen bericht ingevuld!\n");
        else if (preg_match("/Meindert Jorna/",$input))return nl2br("Meindert Jorna is informatica docent op het Pantarijn, ontdekker van de sjiggle diggle en keizer van het rijk der Codepanta.");
        else if (preg_match("/meindert jorna/",$input)) return nl2br("Namen schrijf je met een hoofdletter Sjiggle Diggle... Probeer maar \"Wie is Meindert Jorna.\"");
@@ -87,17 +87,17 @@
     ?>
     <div id="aboveChatbot">
         <a class="indexLink" href="index.php"><h1 class="title">Dit is geen ROBOCHAT.</h1></a>
-        <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.<br>Hij beantwoord vragen over codepanta en school gerelateerde dingen.<br>Typ "help" voor alle mogelijkheden.</p>
+        <p class="intro">Deze chatbot is een wiki geïnspireerd op codepanta.<br>Hij beantwoord vragen over codepanta en school gerelateerde dingen.<br>Vraag "help" voor alle mogelijkheden.</p>
     </div>
     <div class="chatbot">
         <div class="chatdiv">
             <p class="name"><?php echo nl2br("Welkom ".$_SESSION["name"]." (".$_SESSION["age"]." jaar)\n");?></p>
             <p class="output"><?php echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p>
         </div>
-            <form id="chatbotForm" method="post">
-                <input class="input" name="cMessage" type="text" placeholder="Typ hier je vraag.">
-                <input class="submit" type="submit" name="submit" value="Verzend je vraag"/>
-            </form>
+        <form id="chatbotForm" method="post">
+            <input class="input" name="cMessage" type="text" placeholder="Typ hier je vraag.">
+            <input class="submit" type="submit" name="submit" value="Verzend je vraag">
+        </form>
     </div>
     <div class="footer">
         <p>Version: Willem Albeda 2020.</p>

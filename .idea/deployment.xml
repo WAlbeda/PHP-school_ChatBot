@@ -17,6 +17,9 @@
           <mappings>
             <mapping deploy="PHP-school" local="$PROJECT_DIR$" web="/PHP-school" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/data.txt" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
