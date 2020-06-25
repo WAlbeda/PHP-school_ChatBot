@@ -56,7 +56,7 @@
     }
     function echoInput(){
         if (!empty($_POST["cMessage"]) && $_POST["cMessage"] !== "Ik weet niet hoe ik hier op moet antwoorden.\n Jouw vraag was \"\".") {
-            $output = $_POST["cMessage"];
+            $output = '"'.$_POST["cMessage"].'"';
             $output .= nl2br("\n");
             echo $output;
         }
@@ -93,7 +93,8 @@
     <div class="chatbot">
         <div class="chatdiv">
             <p class="name"><?php echo nl2br("Welkom ".$_SESSION["name"]." (".$_SESSION["age"]." jaar)\n");?></p>
-            <p class="output"><?php echo echoInput(); addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p>
+            <p class="inputRepeat">Jouw vraag: <?php echo echoInput();?></p>
+            <p class="output">Antwoord:<br><?php echo addQuestion(); writeQ_A();?><?php if (isset($_POST["submit"])) sendSResponse(findSResponse(getCMessage()));?></p>
         </div>
         <form id="chatbotForm" method="post">
             <input class="input" name="cMessage" type="text" placeholder="Typ hier je vraag.">

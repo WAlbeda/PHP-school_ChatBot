@@ -134,6 +134,11 @@ body {
     padding-bottom: 20px;
 }
 
+.inputRepeat {
+    padding-top: 10vh;
+    text-align: center;
+}
+
 .output {
     padding-top: 30vh;
     text-align: center;
