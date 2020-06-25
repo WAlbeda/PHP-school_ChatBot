@@ -87,6 +87,9 @@
                         ?>
                     </select>
                 </div>
+                <div class="agreeRules">
+                    <input type="checkbox" required><label>Ik ga akkoord met dat mijn gegevens gebruikt mogen worden om deze website te verbeteren.</label>
+                </div>
                 <input class="submitCatbot" type="submit" name="submit" value="Naar de chatbot!">
             </form>
         </div>

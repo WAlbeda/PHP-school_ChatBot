@@ -54,8 +54,12 @@ body {
     color: #ffffff;
 }
 
+.agreeRules {
+    margin-top: 50px;
+}
+
 .submitCatbot {
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 22px;
     background-color: #000000;
     color: #ffffff;
