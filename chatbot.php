@@ -39,7 +39,7 @@
        else if (preg_match("/5g/i",$input)) return nl2br("5G is de nieuwste en snelste techniek (op het moment van schrijven) om data vanaf je smartphone met het mobile netwerk te verzenden.<br>5G is niet gevaarlijk, er is hier genoeg onderzoek voor gedaan en als je die nog steeds niet geloofd moet je zelf maar opnieuw je natuurkunde lessen volgen.<br>5G heeft ook niks te maken met het Corona virus.");
        else if (preg_match("/robot/i",$input)) return nl2br("Een robot is een programmeerbare machine die zelf kan bewegen en fysieke taken kan uitvoeren.<br>Daarom ben ik een chatbot en geen chatrobot, ik kan namelijk niet bewegen.");
        else if (preg_match("/robochat/i",$input)) return nl2br("Een RoboChat is niet een bestaand iets, wel is het de naam voor sommige chatbots.<br>Het is dus een eigennaam en heeft geen vaste betekenis.");
-       else if (preg_match("/banaan/i",$input)) return '<img src="banaan.png" alt="banaan">';
+       else if (preg_match("/banaan/i",$input)) return '<img class="banaan" src="banaan.png" alt="banaan">';
        else if (preg_match("/mogelijkheden/i",$input)) return nl2br("Alle mogelijkheden zijn: \"Meindert Jorna\", \"meindert jorna\", \"Meindert JC\", \"school pc\", \"codepanta\", \"codepnata\", \"corona\", \"covid\", \"5g\", \"banaan\", \"robot\", \"robochat\", \"mogelijkheden\", \"help\".");
        else {
            return "Ik weet niet hoe ik hier op moet antwoorden.<br> Jouw vraag was \"$input\".<br>Vraag anders straks \"mogelijkheden\" om alle mogelijke vragen te zien.<br>".
